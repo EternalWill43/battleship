@@ -2,11 +2,11 @@ const ship = (length, x1, y1, dir) => {
     let arr = [];
     let hp = length;
     while(length--) {
-        if (dir === 'D') {
+        if (dir === 'R') {
             let box = [x1, y1++, 'O'];
             arr.push(box);
         }
-        if (dir === 'R') {
+        else if (dir === 'D') {
             let box = [x1++, y1, 'O'];
             arr.push(box);
         }

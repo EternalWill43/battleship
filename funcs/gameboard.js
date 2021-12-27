@@ -8,6 +8,13 @@ const gameBoard = (sz) => {
     }
     return {
         board: arr,
+        placeShip: function(oneShip) {
+            for (let i = 0; i < oneShip.coords.length; i++) {
+                let xpos = oneShip.coords[i][0];
+                let ypos = oneShip.coords[i][1];
+                arr[xpos][ypos] = 'O';
+            }
+        }
     }
  }
 
