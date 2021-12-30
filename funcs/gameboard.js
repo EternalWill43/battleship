@@ -14,6 +14,16 @@ const gameBoard = (sz) => {
                 let ypos = oneShip.coords[i][1];
                 arr[xpos][ypos] = 'O';
             }
+        },
+        getHP: function() {
+            let total = 0;
+            console.log(arr[0][0]);
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j] === 'O') total += 1;
+                }
+            }
+            return total;
         }
     }
  }

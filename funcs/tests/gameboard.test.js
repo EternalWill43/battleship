@@ -28,3 +28,14 @@ test("Initialize 2 ships", () => {
         ]
     );
 });
+
+test("Return max hp", () => {
+   let shipA = ship(2,0,0);
+   let shipB = ship(3,1,1);
+   let board = gameBoard(4);
+   board.placeShip(shipA);
+   board.placeShip(shipB);
+   expect(
+       board.getHP()
+   ).toBe(5);
+});
