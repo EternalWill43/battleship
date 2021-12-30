@@ -14,6 +14,16 @@ test("horizontal ship placement", () => {
    );
 });
 
+test("vertical ship placement", () => {
+    expect(ship(3,0,1,'D').coords).toStrictEqual(
+        [
+            [0,1,'O'],
+            [1,1,'O'],
+            [2,1,'O']
+        ]
+    );
+});
+
 test("Hit function", () => {
     let testShip = ship(2,0,0,'D');
     testShip.hit(0,0);

@@ -1,13 +1,13 @@
-const ship = (length, x1, y1, dir) => {
+const ship = (length, row, col, dir) => {
     let arr = [];
     let hp = length;
     while(length--) {
         if (dir === 'R') {
-            let box = [x1, y1++, 'O'];
+            let box = [row, col++, 'O'];
             arr.push(box);
         }
         else if (dir === 'D') {
-            let box = [x1++, y1, 'O'];
+            let box = [row++, col, 'O'];
             arr.push(box);
         }
     }
