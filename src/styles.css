@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    background-color: rgb(30,30,30);
+    width: 100%;
+    height: 100%
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.container {
+    height: 900px;
+    width: 900px;
+    font-size: 0;
+    margin: auto;
+}
+
+.square {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.btn {
+    border-radius: 5px;
+    border: 1px solid white;
+    justify-content: center;
+    font-size: 20px;
+    padding: .5em;
+    background-color: transparent;
+    color: white;
+}
+
+.btn:focus {
+    border-radius: 10px;
+}

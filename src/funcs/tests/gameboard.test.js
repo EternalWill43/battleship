@@ -1,5 +1,5 @@
-const gameBoard = require("../gameboard");
-const ship = require("../ship");
+const gameBoard = require("../gameboard.js");
+const ship = require("../ship.js");
 
 test("Populate grid", () => {
     expect(
@@ -47,4 +47,26 @@ test("Two ships get HP", () => {
    expect(
        board.getHP()
    ).toBe(5);
+});
+
+test("Receiving attack miss", () => {
+    let x = ship(2, 0, 0, 'R');
+    let y = ship(3, 1, 1, 'D');
+    let board = gameBoard(5);
+    board.placeShip(x);
+    board.placeShip(y);
+    expect(
+        board.receiveAttack(2,2)
+    ).toBe(false);
+});
+
+test("Receiving attack hit", () => {
+    let x = ship(2, 0, 0, 'R');
+    let y = ship(3, 1, 1, 'D');
+    let board = gameBoard(5);
+    board.placeShip(x);
+    board.placeShip(y);
+    expect(
+        board.receiveAttack(2,1)
+    ).toBe(true);
 });

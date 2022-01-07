@@ -1,4 +1,4 @@
-const ship = require("../ship");
+const ship = require("../ship.js");
 
 test("regular valid input", () => {
     expect(ship(2, 0,0, 'D').coords).toStrictEqual([[0,0,'O'],[1,0,'O']]);

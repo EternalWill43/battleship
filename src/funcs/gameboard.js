@@ -23,6 +23,9 @@ const gameBoard = (sz) => {
                 }
             }
             return total;
+        },
+        receiveAttack: function(row, col) {
+            return arr[row][col] === 'O';
         }
     }
  }
